@@ -6,10 +6,10 @@ import tweepy as tp
 from time import sleep
 #random change
 
-consumer_key = 'NjqpiOUsds9wTCGD7nVleK3Qa'
-consumer_secret = 'ER8IW1izGRqTzMz6fXnQgfb5B4lrBEqedmfgGTSZttPQLh54NT'
-access_token = '1338210464669593601-yILKEId8Q5GrRm5QgrTMqoCor70Bt8'
-access_secret = '2iwOwpWrvJNwL4Lwm78Ehv1ckDzpDixCZGufwvLf8tafY'
+consumer_key = environ['consumer_key']
+consumer_secret = environ['consumer_secret']
+access_token = environ['acces_token']
+access_secret = environ['access_secret']
 
 auth = tp.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
