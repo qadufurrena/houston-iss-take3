@@ -16,7 +16,7 @@ auth = tp.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
 api = tp.API(auth)
 
-text = "The ISS is over Houston"
+text = "Look to the skies! The ISS is over Houston!"
 
 #center_lon and center_lat JSC coordinates, center_lon = -95.093186
     #center_lat = 29.552839
