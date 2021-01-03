@@ -1,1 +1,1 @@
-"worker: python circle_subtract_ISS.py" 
+worker: python circle_subtract_ISS.py
