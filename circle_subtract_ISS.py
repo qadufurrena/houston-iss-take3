@@ -1,7 +1,7 @@
 import json
 import urllib.request
 import os
-from os import en
+from os import environ
 import math
 import tweepy as tp
 from time import sleep
