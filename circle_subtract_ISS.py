@@ -5,7 +5,7 @@ from os import environ
 import math
 import tweepy as tp
 from time import sleep
-#random change
+#random changes
 
 consumer_key = environ['consumer_key']
 consumer_secret = environ['consumer_secret']
