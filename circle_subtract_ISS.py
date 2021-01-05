@@ -36,7 +36,7 @@ while True:
     center_lat = 29.552839
     Rlat = abs((center_lat-lat) * 110.574)
     Rlon = abs((center_lon-lon) * (111.320 * math.cos(lat)))
-    while Rlat > R or Rlon > R:
+    if Rlat > R or Rlon > R:
         print("nope")
         sleep(5)
     else:
