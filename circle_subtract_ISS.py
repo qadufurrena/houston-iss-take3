@@ -1,28 +1,26 @@
 import json
 import urllib.request
 import os
-from os import environ
 import math
 import tweepy as tp
 from time import sleep
-#random changes
 
 consumer_key = environ['consumer_key']
 consumer_secret = environ['consumer_secret']
-access_token = environ['access_token']
+access_token = environ['acces_token']
 access_secret = environ['access_secret']
 
 auth = tp.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
 api = tp.API(auth)
 
-text = "Look to the skies! The ISS is over Houston!"
+text = "Look to the Skies! The ISS is over Houston"
 
 #center_lon and center_lat JSC coordinates, center_lon = -95.093186
-    #center_lat = 29.552839
+#center_lat = 29.552839
 #latitude: 1 deg = 110.574km
 #longitude: 1 deg = 111.320*cos(latitude)km
-#radius of visibility = 2316.4km 
+#radius of visibility = 2316.4km, when=> 40deg in sky, radius = 1774.5km
 
 while True:
     url = 'http://api.open-notify.org/iss-now.json'
@@ -31,19 +29,22 @@ while True:
     location = result['iss_position']
     lat = float(location['latitude'])
     lon = float(location['longitude'])
-    R = 2316.4
+    R = 1774.5
     center_lon = -95.093186
     center_lat = 29.552839
-    Rlat = abs((center_lat-lat) * 110.574)
-    Rlon = abs((center_lon-lon) * (111.320 * math.cos(lat)))
-    if Rlat > R or Rlon > R:
-        print("nope")
-        sleep(5)
-    else:
+    x = lon
+    y = lat
+    Rlat = abs((center_lat-y) * 110.574)
+    Rlon = abs((center_lon-x) * (111.320 * math.cos(y*0.01745329)))
+    C = (math.sqrt(((Rlat) ** 2) + ((Rlon) ** 2)))
+    if C <= R:
+        print("It's here!", "lat:" lat, "lon:" lon, "Rlat:" Rlat, "Rlon:" Rlon, "C:" C)
         api.update_status(text)
-        print("It's here!")
         sleep(1800)
-        
+    else:
+        print("nope", "lat:" lat, "lon:" lon, "Rlat:" Rlat, "Rlon:" Rlon, "C:" C)
+        sleep(5)
+    
 
 
 
