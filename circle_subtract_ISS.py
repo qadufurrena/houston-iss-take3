@@ -21,7 +21,7 @@ text = "Look to the Skies! The ISS is over Houston"
 #latitude: 1 deg = 110.574km
 #longitude: 1 deg = 111.320*cos(latitude)km
 #radius of visibility = 2316.4km, when=> 40deg in sky, radius = 1774.5km  
-#deploy for godsake!
+#deploy for godsake!!!
 
 while True:
     url = 'http://api.open-notify.org/iss-now.json'
