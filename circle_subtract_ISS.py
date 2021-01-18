@@ -45,7 +45,7 @@ while True:
         sleep(1800)
     else:
         print("nope", "lat:", lat, "lon:", lon, "Rlat:", Rlat, "Rlon:", Rlon, "C:", C)
-        sleep(22)
+        sleep(5)
     
 
 
