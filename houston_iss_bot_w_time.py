@@ -45,7 +45,7 @@ while True:
 while True:
     now_hour = int(datetime.now().strftime('%H'))
     
-    if now_hour >= 20 and now_hour <= 23:
+    if now_hour >= 3 and now_hour <= 6 or now_hour >= 10 and now_hour <= 12:
         (lat, lon) = current_position('http://api.open-notify.org/iss-now.json')
 
         Rlat = abs((center_lat-lat) * 110.574)
