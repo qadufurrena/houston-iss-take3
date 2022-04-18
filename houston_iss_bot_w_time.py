@@ -54,7 +54,7 @@ while True:
             api.update_status(text)
             sleep(1800)
         else:
-            print("suck it", "lat:", lat, "lon:", lon, "Rlat:", Rlat, "Rlon:", Rlon, "C:", C)
+            print("not here", "lat:", lat, "lon:", lon, "Rlat:", Rlat, "Rlon:", Rlon, "C:", C)
             sleep(1)
     else: 
         print('nows not the time')
