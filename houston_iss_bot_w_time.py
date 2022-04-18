@@ -40,9 +40,6 @@ while True:
     Rlat = abs((center_lat-y) * 110.574)
     Rlon = abs((center_lon-x) * (111.320 * math.cos(y*0.01745329)))
     C = (math.sqrt(((Rlat) ** 2) + ((Rlon) ** 2)))
-
-
-while True:
     now_hour = int(datetime.now().strftime('%H'))
     
     if now_hour >= 3 and now_hour <= 6 or now_hour >= 10 and now_hour <= 12:
@@ -57,13 +54,8 @@ while True:
             api.update_status(text)
             sleep(1800)
         else:
-            print("nope", "lat:", lat, "lon:", lon, "Rlat:", Rlat, "Rlon:", Rlon, "C:", C)
+            print("not here", "lat:", lat, "lon:", lon, "Rlat:", Rlat, "Rlon:", Rlon, "C:", C)
             sleep(1)
     else: 
-        print('not here')
+        print('nows not the time')
         sleep(5)
-    
-
-
-
-
