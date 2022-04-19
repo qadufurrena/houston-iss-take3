@@ -18,11 +18,11 @@ api = tp.API(auth)
 
 text = "Look to the Skies! The ISS is over Houston"
 
-#center_lon and center_lat JSC coordinates, center_lon = -95.093186
-#center_lat = 29.552839
-#latitude: 1 deg = 110.574km
-#longitude: 1 deg = 111.320*cos(latitude)km
-#radius of visibility = 2316.4km, when=> 40deg in sky, radius = 1774.5km  
+# center_lon and center_lat JSC coordinates, center_lon = -95.093186
+# center_lat = 29.552839
+# latitude: 1 deg = 110.574km
+# longitude: 1 deg = 111.320*cos(latitude)km
+# radius of visibility = 2316.4km, when=> 40deg in sky, radius = 1774.5km  
 
 
 while True:
